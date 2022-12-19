@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Elliot Motte"
 title_separator          : "-"
-name                     : &name "Elliot Motte"
+name                     : &name "About"
 description              : &description "Ph.D. candidate in Economics"
 url                      : https://Elliot-Motte.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -83,11 +83,14 @@ author:
   name             : "Elliot Motte"
   avatar           : "Elliot_photopro_1_edit_final3.png"
   bio              : "Ph.D. candidate in Economics"
-  location         : "University Pompeu Fabra, Barcelona, Spain"
+  location         : "University Pompeu Fabra, Barcelona"
+  email            : "elliot.motte@upf.edu"
+  twitter          : "https://twitter.com/ElliotMotte"
+  linkedin         : "https://www.linkedin.com/in/elliot-motte-9a60b2104/"
+  github           : "https://github.com/Elliot-Motte"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : #"http://yourfullgooglescholarurl.com"
-  email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,20 +99,17 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/Elliot-Motte"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
   orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "https://twitter.com/ElliotMotte"
   vine             :
   weibo            :
   xing             :
