@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Elliot Motte"
+title                    : "Home"
 title_separator          : "-"
-name                     : &name "About"
+name                     : &name "Home"
 description              : &description "Ph.D. candidate in Economics"
 url                      : https://Elliot-Motte.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
