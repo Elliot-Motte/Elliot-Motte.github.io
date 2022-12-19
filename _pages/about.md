@@ -14,4 +14,4 @@ I am an applied microeconomist interested in political economy, media economics 
 
 You can find more details about my research and background in my [CV](https://www.dropbox.com/s/66kwbsom7ucoxjh/CV_Elliot_Motte.pdf?dl=0).
 
-If you want to get in touch, please send an email to [elliot.motte@upf.edu](mailto:elliot.motte@upf.edu).
+If you want to get in touch, please send me an email at [elliot.motte@upf.edu](mailto:elliot.motte@upf.edu).
