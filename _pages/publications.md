@@ -52,6 +52,7 @@ Linking the location and timing of FEMA-declared disasters to large-scale electo
 <ul>
   <li>
     Media Slant and Public Policy Views, with <a href="https://sites.google.com/site/milenadjourelova/home">Milena Djourelova</a>, <a href="https://www.rubendurante.net/">Ruben Durante</a> and <a href="https://www.epatacchini.com/">Eleonora Patacchini</a> <br />
+    <i>American Economic Association Papers and Proceedings</i>. May 2024.<br />
     <a href="https://www.aeaweb.org/articles?id=10.1257/pandp.20241005"><b>Published Version</b></a> | <a href="https://raw.githubusercontent.com/Elliot-Motte/Elliot-Motte.github.io/master/files/01_AEAPP_2024_MediaSlant_PublicPolicyViews/Djourelova_Durante_Motte_Patacchini_AEAPP_2024_Media_Slant_and_Public_Policy_Views.pdf" download><b>Ungated Manuscript</b></a> | <a href="https://github.com/Elliot-Motte/MediaSlant_AEAPP2024"><b>Replication Files</b></a> 
     <details> <summary> Abstract </summary>
     <p>
@@ -68,6 +69,7 @@ We study how exposure to partisan news channels (Fox News and MSNBC) affects ind
 <ul>
   <li>
     The road to recovery: the role of poverty in the exposure, vulnerability and resilience to floods in Accra, with <a href="https://blogs.worldbank.org/team/alvina-erman">Alvina Erman</a>, <a href="https://sites.google.com/view/radhika-goyal/home?authuser=0">Radhika Goyal</a>, Akosua Asare, Shinya Takamatsu, Xiaomeng Chen, Silvia Malgioglio, Alexander Skinner, Nobuo Yoshida, and <a href="https://www.worldbank.org/en/about/people/s/stephane-hallegatte">Stéphane Hallegatte</a> <br />
+    <i>Economics of Disasters and Climate Change</i> (2020), 4: 171-193<br />
     <a href="https://link.springer.com/article/10.1007/s41885-019-00056-w">Published Version</a>
   </li>
 </ul>
