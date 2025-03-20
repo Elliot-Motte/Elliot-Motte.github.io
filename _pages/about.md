@@ -12,6 +12,8 @@ I am a Ph.D. candidate in economics at Universitat Pompeu Fabra in Barcelona, Sp
 
 I am an applied microeconomist interested in political economy, media economics and machine learning methods for text analysis.
 
+I am visiting the Paris School of Economics during the 2025 Spring Term.
+
 You can read my <a href="https://raw.githubusercontent.com/Elliot-Motte/Elliot-Motte.github.io/master/files/CV_Elliot_Motte.pdf" download style="text-decoration: none;"><b>CV</b></a> if you want more details about my research and background.
 
 If you want to get in touch, please send me an email at [elliot.motte@upf.edu](mailto:elliot.motte@upf.edu). 
