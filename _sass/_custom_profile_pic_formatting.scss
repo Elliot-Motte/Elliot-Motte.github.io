@@ -1,0 +1,34 @@
+// Custom overrides for Minimal Mistakes theme
+
+// Increase sidebar width and spacing
+
+// Ensure sidebar and content align side by side
+
+.sidebar {
+  width: 22%;
+  margin-right: 3%;
+}
+
+.page {
+  width: 75%;
+}
+
+.publication {
+  width: 75%;
+}
+
+.cv {
+  width: 75%;
+}
+
+
+//Make picture to a certain width and without border padding
+.author__avatar img {
+  border-radius: 0 !important;    // Remove the circular crop
+  box-shadow: none !important;    // Optional: remove shadow for cleaner look
+  width: 310px;               // Change size
+  max-width: 310px;           // Change max width size
+  height: auto;                   // Maintain aspect ratio
+  padding: 0 !important; // 👈 removes the 5px padding
+  border: none !important; // 👈 removes the thin border
+}

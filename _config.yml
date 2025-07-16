@@ -209,6 +209,13 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # about
+  - scope:
+      path: ""
+      type: about
+    values:
+      layout: single
+      author_profile: true
   # _teaching
   - scope:
       path: ""
