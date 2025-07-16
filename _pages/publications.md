@@ -1,6 +1,6 @@
 ---
-layout: archive
-title: ""
+#layout: archive
+#title: ""
 permalink: /research/
 author_profile: true
 ---
@@ -34,6 +34,17 @@ author_profile: true
 
 
 
+
+<div class="section">
+<h2>Job Market Paper</h2>
+<p><span style="text-decoration: none; color:rgb(35, 87, 203); font-size: 18px;"><b>Insult Politics in the Age of Social Media</b></span></p>
+<i>Draft coming soon</i>
+</div>
+
+
+---
+
+
 <div class="section">
 <h2>Working Papers</h2>
   <a href="https://raw.githubusercontent.com/Elliot-Motte/Elliot-Motte.github.io/master/files/02_Climate_Change_Narratives/Experience_Narratives_Climate_Change_Beliefs_20250108.pdf" download style="text-decoration: none; color:rgb(35, 87, 203); font-size: 18px;"><b>Experience, Narratives and Climate Change Beliefs</b></a>, with <a href="https://sites.google.com/site/milenadjourelova/home" style="text-decoration: none;">Milena Djourelova</a>, <a href="https://www.rubendurante.net/" style="text-decoration: none;">Ruben Durante</a> and <a href="https://www.epatacchini.com/" style="text-decoration: none;">Eleonora Patacchini</a><br />
@@ -51,7 +62,6 @@ Linking the location and timing of FEMA-declared disasters to large-scale electo
 ---
 <div class="section">
 <h2>Work in progress</h2>
-<p>Insult Politics in the Age of Social Media</p>
 <p>Does jury gender composition affect trial outcomes? Evidence from French criminal courts, with <a href="https://mariebeigelman.github.io/" style="text-decoration: none;">Marie Beigelman</a></p>
 </div>
 
