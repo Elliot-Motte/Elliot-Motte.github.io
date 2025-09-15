@@ -7,6 +7,7 @@
 .sidebar {
   width: 22%;
   margin-right: 3%;
+  //max-width: 300px;
 }
 
 .page {
@@ -26,8 +27,8 @@
 .author__avatar img {
   border-radius: 0 !important;    // Remove the circular crop
   box-shadow: none !important;    // Optional: remove shadow for cleaner look
-  width: 250px;               // Change size
-  max-width: 250px;           // Change max width size
+  width: 100%;               // Make it such that the picture takes up 100% of its container size (the sidebar). This allows flexible adjustment depending on screen size
+  max-width: 300px;           // Change max width size
   height: auto;                   // Maintain aspect ratio
   padding: 0 !important; // 👈 removes the 5px padding
   border: none !important; // 👈 removes the thin border
