@@ -26,8 +26,8 @@
 .author__avatar img {
   border-radius: 0 !important;    // Remove the circular crop
   box-shadow: none !important;    // Optional: remove shadow for cleaner look
-  width: 310px;               // Change size
-  max-width: 310px;           // Change max width size
+  width: 250px;               // Change size
+  max-width: 250px;           // Change max width size
   height: auto;                   // Maintain aspect ratio
   padding: 0 !important; // 👈 removes the 5px padding
   border: none !important; // 👈 removes the thin border
