@@ -15,7 +15,7 @@ I am a Ph.D. candidate in economics at Universitat Pompeu Fabra in Barcelona, Sp
 
 <b>I am on the 2025/2026 job market.</b>
 
-My research focuses on political economy and environmental economics. I use Large Language Models and other cutting-edge text analysis methods in my work.
+My research focuses on political economy. I am also interested in public economics, law and economics and environmental economics. I use Large Language Models and other cutting-edge text analysis methods in my work.
 
 You can read my <a href="https://raw.githubusercontent.com/Elliot-Motte/Elliot-Motte.github.io/master/files/CV_Elliot_Motte.pdf" download style="text-decoration: none;"><b>CV</b></a> if you want more details about my research and background.
 
