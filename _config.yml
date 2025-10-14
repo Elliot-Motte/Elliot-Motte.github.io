@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Elliot Motte"
 title_separator          : "-"
 name                     : &name "Elliot Motte"
-description              : &description "Ph.D. candidate in Economics"
+description              : &description "Ph.D. Candidate in Economics (UPF)"
 url                      : https://Elliot-Motte.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Elliot-Motte/Elliot-Motte.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Elliot Motte"
   avatar           : "Job_Market_headshot.png" #Elliot_photopro_1_edit_final3.png
-  bio              : "Ph.D. candidate in Economics"
+  bio              : "Ph.D. Candidate in Economics (UPF)"
   location         : #"Universitat Pompeu Fabra, Barcelona" #, Barcelona. Universitat Pompeu Fabra,<br>Barcelona
 
   email            : "elliot.motte@upf.edu"
