@@ -53,7 +53,7 @@ author_profile: true
   <br />
 
   <!-- Second Paper -->
-  <a href="https://raw.githubusercontent.com/Elliot-Motte/Elliot-Motte.github.io/master/files/02_Climate_Change_Narratives/Experience_Narratives_Climate_Change_Beliefs_20250108.pdf" download style="text-decoration: none; color:rgb(35, 87, 203); font-size: 18px;"><b>Experience, Narratives and Climate Change Beliefs</b></a>, with <a href="https://sites.google.com/site/milenadjourelova/home" style="text-decoration: none;">Milena Djourelova</a>, <a href="https://www.rubendurante.net/" style="text-decoration: none;">Ruben Durante</a> and <a href="https://www.epatacchini.com/" style="text-decoration: none;">Eleonora Patacchini</a><br />
+  <a href="https://raw.githubusercontent.com/Elliot-Motte/Elliot-Motte.github.io/master/files/02_Climate_Change_Narratives/DDMP_Experience_Narratives_Climate_Change_Beliefs.pdf" download style="text-decoration: none; color:rgb(35, 87, 203); font-size: 18px;"><b>Experience, Narratives and Climate Change Beliefs</b></a>, with <a href="https://sites.google.com/site/milenadjourelova/home" style="text-decoration: none;">Milena Djourelova</a>, <a href="https://www.rubendurante.net/" style="text-decoration: none;">Ruben Durante</a> and <a href="https://www.epatacchini.com/" style="text-decoration: none;">Eleonora Patacchini</a><br />
   Revise and resubmit <b><i>Journal of the European Economic Association</i></b>
   <p class="short-abstract">
   <i>Short Abstract:</i>  Shared shocks do not generate shared beliefs, as natural disasters heighten climate polarization by activating partisan narratives.
