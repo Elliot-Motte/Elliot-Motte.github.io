@@ -44,9 +44,8 @@ author_profile: true
 
   <!-- Job Market Paper -->
   <p style="text-align: justify;">
-    <span style="text-decoration: none; color:rgb(35, 87, 203); font-size: 18px;"><b>Insult Politics in the Age of Social Media</b></span>
+    <a href="https://raw.githubusercontent.com/Elliot-Motte/Elliot-Motte.github.io/master/files/03_Insult_Politics/MOTTE_JMP_Insult_Politics.pdf" download style="text-decoration: none; color:rgb(35, 87, 203); font-size: 18px;"><b>Insult Politics in the Age of Social Media</b></a>
     <b style="color: rgb(150, 38, 38); font-size: 18px;"> (Job Market Paper)</b> <br />
-    <i>Draft coming soon</i><br />
     <i>Short Abstract:</i> Offensive rhetoric by politicians boosts engagement and electoral support, revealing incentives for incivility that deepen partisan polarization.
   </p>
 
