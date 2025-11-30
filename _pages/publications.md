@@ -3,6 +3,7 @@
 #title: ""
 permalink: /research/
 author_profile: true
+redirect_to: /
 ---
 
 <style type="text/css">

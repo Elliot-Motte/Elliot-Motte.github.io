@@ -1,12 +1,9 @@
 ---
-permalink: /
+permalink: /old_about
 #title: "About me"
 #excerpt: "About me"
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
-#I visited the Paris School of Economics during the 2025 Spring Term.
+redirect_to: /
 ---
 
 
