@@ -389,7 +389,8 @@ redirect_from:
            target="_blank" class="link-coauthor">Ricardo Baeza-Yates</a>,
         <a href="https://barcelona-ipeg.eu/mrq/"
            target="_blank" class="link-coauthor">Marta Reynal-Querol</a>,
-        Federico Scabbia
+        <a href="https://federico-scabbia.github.io/"
+           target="_blank" class="link-coauthor">Federico Scabbia</a>
       </div>
 
     </summary>
