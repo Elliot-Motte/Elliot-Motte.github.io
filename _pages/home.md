@@ -300,7 +300,7 @@ redirect_from:
      ============================ -->
 <section class="section" id="wip">
 <div class="section-inner">
-<h2 class="section-title">Work in Progress</h2>
+<h2 class="section-title">Selected Work in Progress</h2>
 
 <!-- === WIP 1 === -->
 <article class="card">
