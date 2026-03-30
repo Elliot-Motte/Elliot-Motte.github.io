@@ -44,19 +44,14 @@ redirect_from:
     <!-- === Right: Text === -->
     <div class="feature__item feature__item--text">
 
-      <h2 class="page__title">Welcome to my website!</h2>
+      <h2 class="page__title">Welcome!</h2>
 
       <p class="page__lead">
         I am a Ph.D. Candidate in Economics at Universitat Pompeu Fabra.
       </p>
 
       <p class="page__lead">
-        <b>I am on the 2025/2026 job market.</b>
-      </p>
-
-      <p class="page__lead">
-        My research focuses primarily on <b>political economy</b>.  
-        I also work on public economics, law and economics, and environmental economics.
+        My research focuses primarily on <b>political economy</b>, with particular interests in how the media shapes public beliefs and behaviors.
         Much of my work uses Large Language Models and other cutting-edge text analysis methods.
       </p>
 
