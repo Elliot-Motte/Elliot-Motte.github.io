@@ -44,15 +44,21 @@ redirect_from:
     <!-- === Right: Text === -->
     <div class="feature__item feature__item--text">
 
-      <h2 class="page__title">Welcome!</h2>
+      <h2 class="page__title">Welcome to my website!</h2>
 
       <p class="page__lead">
-        I am a Ph.D. Candidate in Economics at Universitat Pompeu Fabra. My research focuses primarily on <b>political economy</b>, with particular interests in how the media shapes public beliefs and behaviors. 
+        I am a Ph.D. Candidate in Economics at Universitat Pompeu Fabra.
       </p>
 
       <p class="page__lead">
-        I will move to the <b><a href="https://www.unsw.edu.au/business/our-schools/economics" target="_blank" class="link-affiliation">University of New South Wales</a></b> as a postdoctoral fellow (2026-2027).<br>In September 2027, I will be joining <b><a href="https://crest.science/" target="_blank" class="link-affiliation">CREST</a></b> <b><a href="https://ensai.fr/en/" target="_blank" class="link-affiliation">ENSAI</a></b> as an Assistant Professor of Economics.
-       </p>
+        <b>I am on the 2025/2026 job market.</b>
+      </p>
+
+      <p class="page__lead">
+        My research focuses primarily on <b>political economy</b>.  
+        I also work on public economics, law and economics, and environmental economics.
+        Much of my work uses Large Language Models and other cutting-edge text analysis methods.
+      </p>
 
       <p class="hero-contact">
         <b>Contact:</b>

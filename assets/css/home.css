@@ -186,16 +186,6 @@ h3.jmp-title {
   color: #4b5563 !important;       /* remain gray when hovered */
 }
 
-.link-affiliation {
-  color: #1f4b8e !important;       /* black (matches bold "political economy") */
-  text-decoration: none !important;
-}
-
-.link-affiliation:hover {
-  text-decoration: underline !important;
-  color: #1f4b8e !important;
-}
-
 /* Main layout */
 main {
   padding-left: 1rem;
