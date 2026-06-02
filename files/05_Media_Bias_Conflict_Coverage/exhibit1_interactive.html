@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exhibit 1 Interactive Hover</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f6f7f9;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      color: #202124;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 22px auto;
+      padding: 18px 20px 22px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(20, 27, 45, 0.08);
+    }
+    .subtitle {
+      margin: 0 0 14px 0;
+      font-size: 15px;
+      color: #5d6470;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      overflow: visible;
+    }
+    .axis-label {
+      font-size: 22px;
+      fill: #202124;
+    }
+    .point {
+      transition: r 120ms ease, fill-opacity 120ms ease, stroke-width 120ms ease;
+      cursor: pointer;
+    }
+    .point:hover {
+      r: 6.8;
+      fill: rgba(32,102,172,0.72);
+      stroke-width: 1.3;
+    }
+    .tooltip {
+      position: fixed;
+      z-index: 10;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 120ms ease, transform 120ms ease;
+      background: rgba(20, 24, 33, 0.96);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 10px 12px;
+      box-shadow: 0 18px 45px rgba(15, 18, 26, 0.28);
+      min-width: 250px;
+    }
+    .tooltip.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .tooltip .title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      letter-spacing: 0.1px;
+    }
+    .tooltip .meta {
+      font-size: 13px;
+      color: rgba(255,255,255,0.86);
+      line-height: 1.35;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="subtitle">Hover over a conflict onset to view its identifying information.</p>
+    <svg viewBox="0 0 1000 700" aria-label="Interactive mismatch scatterplot">
+      <rect x="0" y="0" width="1000" height="700" fill="#ffffff"></rect>
+      <line x1="92.00" y1="581.31" x2="964.00" y2="581.31" stroke="#d9d9d9" stroke-width="1" stroke-dasharray="5 5"/><text x="80.00" y="587.31" text-anchor="end" font-size="18" fill="#303030">0.0</text>
+<line x1="92.00" y1="483.52" x2="964.00" y2="483.52" stroke="#d9d9d9" stroke-width="1" stroke-dasharray="5 5"/><text x="80.00" y="489.52" text-anchor="end" font-size="18" fill="#303030">2.0</text>
+<line x1="92.00" y1="385.72" x2="964.00" y2="385.72" stroke="#d9d9d9" stroke-width="1" stroke-dasharray="5 5"/><text x="80.00" y="391.72" text-anchor="end" font-size="18" fill="#303030">4.0</text>
+<line x1="92.00" y1="287.93" x2="964.00" y2="287.93" stroke="#d9d9d9" stroke-width="1" stroke-dasharray="5 5"/><text x="80.00" y="293.93" text-anchor="end" font-size="18" fill="#303030">6.0</text>
+<line x1="92.00" y1="190.14" x2="964.00" y2="190.14" stroke="#d9d9d9" stroke-width="1" stroke-dasharray="5 5"/><text x="80.00" y="196.14" text-anchor="end" font-size="18" fill="#303030">8.0</text>
+<line x1="92.00" y1="92.34" x2="964.00" y2="92.34" stroke="#d9d9d9" stroke-width="1" stroke-dasharray="5 5"/><text x="80.00" y="98.34" text-anchor="end" font-size="18" fill="#303030">10.0</text>
+      <line x1="92" y1="622" x2="964" y2="622" stroke="#7a7a7a" stroke-width="1.1"></line>
+      <line x1="92" y1="32" x2="92" y2="622" stroke="#7a7a7a" stroke-width="1.1"></line>
+      <line x1="79.60" y1="622.00" x2="79.60" y2="628.00" stroke="#7a7a7a" stroke-width="1"/><text x="79.60" y="650.00" text-anchor="middle" font-size="18" fill="#303030">0.0</text>
+<line x1="250.18" y1="622.00" x2="250.18" y2="628.00" stroke="#7a7a7a" stroke-width="1"/><text x="250.18" y="650.00" text-anchor="middle" font-size="18" fill="#303030">2.0</text>
+<line x1="420.76" y1="622.00" x2="420.76" y2="628.00" stroke="#7a7a7a" stroke-width="1"/><text x="420.76" y="650.00" text-anchor="middle" font-size="18" fill="#303030">4.0</text>
+<line x1="591.34" y1="622.00" x2="591.34" y2="628.00" stroke="#7a7a7a" stroke-width="1"/><text x="591.34" y="650.00" text-anchor="middle" font-size="18" fill="#303030">6.0</text>
+<line x1="761.91" y1="622.00" x2="761.91" y2="628.00" stroke="#7a7a7a" stroke-width="1"/><text x="761.91" y="650.00" text-anchor="middle" font-size="18" fill="#303030">8.0</text>
+<line x1="932.49" y1="622.00" x2="932.49" y2="628.00" stroke="#7a7a7a" stroke-width="1"/><text x="932.49" y="650.00" text-anchor="middle" font-size="18" fill="#303030">10.0</text>
+      <path d="M92.00,422.66 L96.38,421.45 L100.76,420.24 L105.15,419.03 L109.53,417.82 L113.91,416.61 L118.29,415.41 L122.67,414.20 L127.06,412.99 L131.44,411.78 L135.82,410.57 L140.20,409.36 L144.58,408.15 L148.96,406.94 L153.35,405.74 L157.73,404.53 L162.11,403.32 L166.49,402.11 L170.87,400.90 L175.26,399.69 L179.64,398.48 L184.02,397.28 L188.40,396.07 L192.78,394.86 L197.17,393.65 L201.55,392.44 L205.93,391.23 L210.31,390.02 L214.69,388.82 L219.08,387.61 L223.46,386.40 L227.84,385.19 L232.22,383.98 L236.60,382.77 L240.98,381.56 L245.37,380.35 L249.75,379.15 L254.13,377.94 L258.51,376.73 L262.89,375.52 L267.28,374.31 L271.66,373.10 L276.04,371.89 L280.42,370.69 L284.80,369.48 L289.19,368.27 L293.57,367.06 L297.95,365.85 L302.33,364.64 L306.71,363.43 L311.10,362.23 L315.48,361.02 L319.86,359.81 L324.24,358.60 L328.62,357.39 L333.01,356.18 L337.39,354.97 L341.77,353.77 L346.15,352.56 L350.53,351.35 L354.91,350.14 L359.30,348.93 L363.68,347.72 L368.06,346.51 L372.44,345.30 L376.82,344.10 L381.21,342.89 L385.59,341.68 L389.97,340.47 L394.35,339.26 L398.73,338.05 L403.12,336.84 L407.50,335.64 L411.88,334.43 L416.26,333.22 L420.64,332.01 L425.03,330.80 L429.41,329.59 L433.79,328.38 L438.17,327.18 L442.55,325.97 L446.93,324.76 L451.32,323.55 L455.70,322.34 L460.08,321.13 L464.46,319.92 L468.84,318.71 L473.23,317.51 L477.61,316.30 L481.99,315.09 L486.37,313.88 L490.75,312.67 L495.14,311.46 L499.52,310.25 L503.90,309.05 L508.28,307.84 L512.66,306.63 L517.05,305.42 L521.43,304.21 L525.81,303.00 L530.19,301.79 L534.57,300.59 L538.95,299.38 L543.34,298.17 L547.72,296.96 L552.10,295.75 L556.48,294.54 L560.86,293.33 L565.25,292.13 L569.63,290.92 L574.01,289.71 L578.39,288.50 L582.77,287.29 L587.16,286.08 L591.54,284.87 L595.92,283.66 L600.30,282.46 L604.68,281.25 L609.07,280.04 L613.45,278.83 L617.83,277.62 L622.21,276.41 L626.59,275.20 L630.97,274.00 L635.36,272.79 L639.74,271.58 L644.12,270.37 L648.50,269.16 L652.88,267.95 L657.27,266.74 L661.65,265.54 L666.03,264.33 L670.41,263.12 L674.79,261.91 L679.18,260.70 L683.56,259.49 L687.94,258.28 L692.32,257.08 L696.70,255.87 L701.09,254.66 L705.47,253.45 L709.85,252.24 L714.23,251.03 L718.61,249.82 L722.99,248.61 L727.38,247.41 L731.76,246.20 L736.14,244.99 L740.52,243.78 L744.90,242.57 L749.29,241.36 L753.67,240.15 L758.05,238.95 L762.43,237.74 L766.81,236.53 L771.20,235.32 L775.58,234.11 L779.96,232.90 L784.34,231.69 L788.72,230.49 L793.11,229.28 L797.49,228.07 L801.87,226.86 L806.25,225.65 L810.63,224.44 L815.02,223.23 L819.40,222.02 L823.78,220.82 L828.16,219.61 L832.54,218.40 L836.92,217.19 L841.31,215.98 L845.69,214.77 L850.07,213.56 L854.45,212.36 L858.83,211.15 L863.22,209.94 L867.60,208.73 L871.98,207.52 L876.36,206.31 L880.74,205.10 L885.13,203.90 L889.51,202.69 L893.89,201.48 L898.27,200.27 L902.65,199.06 L907.04,197.85 L911.42,196.64 L915.80,195.44 L920.18,194.23 L924.56,193.02 L928.94,191.81 L933.33,190.60 L937.71,189.39 L942.09,188.18 L946.47,186.97 L950.85,185.77 L955.24,184.56 L959.62,183.35 L964.00,182.14" fill="none" stroke="rgb(178,24,43)" stroke-width="3" stroke-dasharray="10 8"></path>
+      <circle class="point" cx="382.83" cy="581.31" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Central African Republic" data-onset="Nov 2009" data-articles="0" data-deaths="34"></circle>
+<circle class="point" cx="418.22" cy="547.42" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Eritrea" data-onset="Jul 2003" data-articles="1" data-deaths="52"></circle>
+<circle class="point" cx="389.85" cy="527.59" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Senegal" data-onset="Jan 2003" data-articles="2" data-deaths="37"></circle>
+<circle class="point" cx="424.43" cy="513.53" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Guinea" data-onset="Sep 2000" data-articles="3" data-deaths="56"></circle>
+<circle class="point" cx="530.63" cy="473.87" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Nigeria" data-onset="Jun 2004" data-articles="8" data-deaths="197"></circle>
+<circle class="point" cx="550.86" cy="464.06" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Nigeria" data-onset="Jan 2004" data-articles="10" data-deaths="250"></circle>
+<circle class="point" cx="461.47" cy="486.16" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mali" data-onset="Jun 2009" data-articles="6" data-deaths="87"></circle>
+<circle class="point" cx="457.5" cy="486.16" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Somalia" data-onset="May 2001" data-articles="6" data-deaths="83"></circle>
+<circle class="point" cx="387.57" cy="502.61" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Togo" data-onset="Jul 2022" data-articles="4" data-deaths="36"></circle>
+<circle class="point" cx="369.68" cy="502.61" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mali" data-onset="Aug 2007" data-articles="4" data-deaths="29"></circle>
+<circle class="point" cx="354.13" cy="502.61" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Central African Republic" data-onset="Jun 2001" data-articles="4" data-deaths="24"></circle>
+<circle class="point" cx="363.8" cy="493.7" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Senegal" data-onset="Apr 2000" data-articles="5" data-deaths="27"></circle>
+<circle class="point" cx="487.92" cy="459.81" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Cameroon" data-onset="Aug 2015" data-articles="11" data-deaths="119"></circle>
+<circle class="point" cx="435.63" cy="468.72" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo" data-onset="Apr 2002" data-articles="9" data-deaths="64"></circle>
+<circle class="point" cx="489.33" cy="445.74" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Cameroon" data-onset="Jun 2023" data-articles="15" data-deaths="121"></circle>
+<circle class="point" cx="471.51" cy="448.9" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Cameroon" data-onset="Sep 2020" data-articles="14" data-deaths="98"></circle>
+<circle class="point" cx="465.26" cy="448.9" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Central African Republic" data-onset="Dec 2023" data-articles="14" data-deaths="91"></circle>
+<circle class="point" cx="571.84" cy="420.15" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo, The Democratic Republic of the" data-onset="Mar 2020" data-articles="26" data-deaths="320"></circle>
+<circle class="point" cx="447.83" cy="448.9" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo, The Democratic Republic of the" data-onset="Aug 2011" data-articles="14" data-deaths="74"></circle>
+<circle class="point" cx="517.63" cy="427.99" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Chad" data-onset="Dec 2005" data-articles="22" data-deaths="169"></circle>
+<circle class="point" cx="644.56" cy="390.03" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="South Sudan" data-onset="Aug 2011" data-articles="49" data-deaths="752"></circle>
+<circle class="point" cx="474.06" cy="425.91" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Cameroon" data-onset="Aug 2022" data-articles="23" data-deaths="101"></circle>
+<circle class="point" cx="647.78" cy="382.77" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo, The Democratic Republic of the" data-onset="Apr 2020" data-articles="57" data-deaths="781"></circle>
+<circle class="point" cx="387.57" cy="445.74" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Angola" data-onset="Nov 2002" data-articles="15" data-deaths="36"></circle>
+<circle class="point" cx="480.5" cy="420.15" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Cameroon" data-onset="Apr 2019" data-articles="26" data-deaths="109"></circle>
+<circle class="point" cx="460.49" cy="423.92" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Feb 2000" data-articles="24" data-deaths="86"></circle>
+<circle class="point" cx="518.13" cy="408.88" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Jan 2005" data-articles="33" data-deaths="170"></circle>
+<circle class="point" cx="138.71" cy="502.61" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Niger" data-onset="Apr 2007" data-articles="4" data-deaths="1"></circle>
+<circle class="point" cx="508.64" cy="407.47" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Cameroon" data-onset="Jul 2021" data-articles="34" data-deaths="152"></circle>
+<circle class="point" cx="409.77" cy="430.17" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo" data-onset="Apr 2016" data-articles="21" data-deaths="47"></circle>
+<circle class="point" cx="490.72" cy="408.88" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Niger" data-onset="Mar 2015" data-articles="33" data-deaths="123"></circle>
+<circle class="point" cx="462.43" cy="411.85" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Tajikistan" data-onset="Sep 2010" data-articles="31" data-deaths="88"></circle>
+<circle class="point" cx="413.25" cy="423.92" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Tajikistan" data-onset="Nov 2018" data-articles="24" data-deaths="49"></circle>
+<circle class="point" cx="427.37" cy="420.15" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Central African Republic" data-onset="Nov 2006" data-articles="26" data-deaths="58"></circle>
+<circle class="point" cx="498.6" cy="402.17" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Niger" data-onset="Dec 2021" data-articles="38" data-deaths="135"></circle>
+<circle class="point" cx="659.49" cy="358.64" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Cameroon" data-onset="Jan 2015" data-articles="94" data-deaths="896"></circle>
+<circle class="point" cx="436.93" cy="411.85" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Mar 2000" data-articles="31" data-deaths="65"></circle>
+<circle class="point" cx="571.31" cy="377.2" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Ethiopia" data-onset="Jun 2023" data-articles="64" data-deaths="318"></circle>
+<circle class="point" cx="502.28" cy="388.11" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Central African Republic" data-onset="Nov 2017" data-articles="51" data-deaths="141"></circle>
+<circle class="point" cx="460.49" cy="397.4" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Cameroon" data-onset="Dec 2017" data-articles="42" data-deaths="86"></circle>
+<circle class="point" cx="400.39" cy="411.85" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Liberia" data-onset="May 2000" data-articles="31" data-deaths="42"></circle>
+<circle class="point" cx="527.11" cy="379.51" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Somalia" data-onset="Dec 2024" data-articles="61" data-deaths="189"></circle>
+<circle class="point" cx="380.36" cy="415.0" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mali" data-onset="Jun 2015" data-articles="29" data-deaths="33"></circle>
+<circle class="point" cx="455.44" cy="396.28" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Chad" data-onset="May 2015" data-articles="43" data-deaths="81"></circle>
+<circle class="point" cx="521.07" cy="379.51" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mali" data-onset="Jan 2012" data-articles="61" data-deaths="176"></circle>
+<circle class="point" cx="654.7" cy="344.83" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Nigeria" data-onset="Mar 2011" data-articles="125" data-deaths="847"></circle>
+<circle class="point" cx="618.69" cy="353.28" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo, The Democratic Republic of the" data-onset="Aug 2016" data-articles="105" data-deaths="555"></circle>
+<circle class="point" cx="372.48" cy="413.4" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mozambique" data-onset="Jul 2018" data-articles="30" data-deaths="30"></circle>
+<circle class="point" cx="605.8" cy="353.75" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Somalia" data-onset="May 2018" data-articles="104" data-deaths="477"></circle>
+<circle class="point" cx="556.45" cy="365.24" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Jun 2011" data-articles="82" data-deaths="267"></circle>
+<circle class="point" cx="441.95" cy="393.05" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Dec 2005" data-articles="46" data-deaths="69"></circle>
+<circle class="point" cx="357.48" cy="413.4" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Eritrea" data-onset="Jun 2016" data-articles="30" data-deaths="25"></circle>
+<circle class="point" cx="425.91" cy="396.28" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Chad" data-onset="May 2017" data-articles="43" data-deaths="57"></circle>
+<circle class="point" cx="347.02" cy="415.0" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mozambique" data-onset="Apr 2016" data-articles="29" data-deaths="22"></circle>
+<circle class="point" cx="595.58" cy="351.47" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Nigeria" data-onset="Jul 2009" data-articles="109" data-deaths="423"></circle>
+<circle class="point" cx="343.23" cy="413.4" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo, The Democratic Republic of the" data-onset="Nov 2005" data-articles="30" data-deaths="21"></circle>
+<circle class="point" cx="435.63" cy="388.11" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Chad" data-onset="Aug 2018" data-articles="51" data-deaths="64"></circle>
+<circle class="point" cx="330.73" cy="413.4" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Senegal" data-onset="Dec 2011" data-articles="30" data-deaths="18"></circle>
+<circle class="point" cx="396.33" cy="395.18" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo, The Democratic Republic of the" data-onset="Feb 2007" data-articles="44" data-deaths="40"></circle>
+<circle class="point" cx="483.55" cy="372.88" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo, The Democratic Republic of the" data-onset="Mar 2013" data-articles="70" data-deaths="113"></circle>
+<circle class="point" cx="502.88" cy="367.04" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Burkina Faso" data-onset="Aug 2019" data-articles="79" data-deaths="142"></circle>
+<circle class="point" cx="578.48" cy="347.63" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Somalia" data-onset="Jun 2019" data-articles="118" data-deaths="346"></circle>
+<circle class="point" cx="556.45" cy="351.92" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo, The Democratic Republic of the" data-onset="Aug 2017" data-articles="108" data-deaths="267"></circle>
+<circle class="point" cx="347.02" cy="402.17" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="TÃ¼rkiye" data-onset="Apr 2000" data-articles="38" data-deaths="22"></circle>
+<circle class="point" cx="316.07" cy="408.88" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Sri Lanka" data-onset="Jun 2003" data-articles="33" data-deaths="15"></circle>
+<circle class="point" cx="643.88" cy="327.39" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="CÃ´te d'Ivoire" data-onset="Feb 2011" data-articles="179" data-deaths="746"></circle>
+<circle class="point" cx="612.66" cy="330.77" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mali" data-onset="Sep 2023" data-articles="167" data-deaths="517"></circle>
+<circle class="point" cx="462.43" cy="367.66" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Somalia" data-onset="Oct 2006" data-articles="78" data-deaths="88"></circle>
+<circle class="point" cx="629.49" cy="324.49" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="CÃ´te d'Ivoire" data-onset="Sep 2002" data-articles="190" data-deaths="630"></circle>
+<circle class="point" cx="385.23" cy="384.48" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Uzbekistan" data-onset="Mar 2004" data-articles="55" data-deaths="35"></circle>
+<circle class="point" cx="733.41" cy="295.16" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Afghanistan" data-onset="Mar 2015" data-articles="347" data-deaths="2,133"></circle>
+<circle class="point" cx="624.04" cy="322.24" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Congo, The Democratic Republic of the" data-onset="Dec 2017" data-articles="199" data-deaths="591"></circle>
+<circle class="point" cx="502.28" cy="351.92" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Central African Republic" data-onset="Oct 2015" data-articles="108" data-deaths="141"></circle>
+<circle class="point" cx="538.84" cy="342.19" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Sudan" data-onset="Jun 2020" data-articles="132" data-deaths="217"></circle>
+<circle class="point" cx="470.65" cy="358.13" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mozambique" data-onset="Aug 2019" data-articles="95" data-deaths="97"></circle>
+<circle class="point" cx="465.26" cy="359.16" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Chad" data-onset="Feb 2020" data-articles="93" data-deaths="91"></circle>
+<circle class="point" cx="606.33" cy="323.48" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Aug 2022" data-articles="194" data-deaths="480"></circle>
+<circle class="point" cx="683.88" cy="303.24" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Sudan" data-onset="May 2011" data-articles="294" data-deaths="1,193"></circle>
+<circle class="point" cx="632.28" cy="313.73" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Nov 2023" data-articles="237" data-deaths="651"></circle>
+<circle class="point" cx="723.59" cy="289.96" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Yemen" data-onset="Aug 2020" data-articles="386" data-deaths="1,901"></circle>
+<circle class="point" cx="468.89" cy="352.37" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mali" data-onset="May 2014" data-articles="107" data-deaths="95"></circle>
+<circle class="point" cx="539.62" cy="333.46" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Aug 2021" data-articles="158" data-deaths="219"></circle>
+<circle class="point" cx="387.57" cy="370.86" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Mar 2017" data-articles="73" data-deaths="36"></circle>
+<circle class="point" cx="396.33" cy="367.04" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Algeria" data-onset="May 2015" data-articles="79" data-deaths="40"></circle>
+<circle class="point" cx="363.8" cy="374.28" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mozambique" data-onset="Oct 2013" data-articles="68" data-deaths="27"></circle>
+<circle class="point" cx="798.88" cy="260.71" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Ethiopia" data-onset="Nov 2020" data-articles="703" data-deaths="4,597"></circle>
+<circle class="point" cx="275.98" cy="390.03" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Benin" data-onset="Oct 2022" data-articles="49" data-deaths="9"></circle>
+<circle class="point" cx="335.1" cy="374.28" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Apr 2017" data-articles="68" data-deaths="19"></circle>
+<circle class="point" cx="462.43" cy="341.46" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="TÃ¼rkiye" data-onset="Jun 2005" data-articles="134" data-deaths="88"></circle>
+<circle class="point" cx="591.03" cy="309.22" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Nov 2021" data-articles="260" data-deaths="401"></circle>
+<circle class="point" cx="493.42" cy="330.47" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Oct 2016" data-articles="168" data-deaths="127"></circle>
+<circle class="point" cx="360.7" cy="362.94" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Ethiopia" data-onset="Jun 2016" data-articles="86" data-deaths="26"></circle>
+<circle class="point" cx="548.1" cy="315.83" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="South Sudan" data-onset="Mar 2012" data-articles="227" data-deaths="242"></circle>
+<circle class="point" cx="492.08" cy="326.58" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Libya" data-onset="Feb 2019" data-articles="182" data-deaths="125"></circle>
+<circle class="point" cx="579.22" cy="304.92" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="May 2021" data-articles="284" data-deaths="349"></circle>
+<circle class="point" cx="480.5" cy="327.66" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Sri Lanka" data-onset="Dec 2005" data-articles="178" data-deaths="109"></circle>
+<circle class="point" cx="430.21" cy="337.96" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Aug 2009" data-articles="144" data-deaths="60"></circle>
+<circle class="point" cx="591.88" cy="296.15" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Libya" data-onset="May 2017" data-articles="340" data-deaths="405"></circle>
+<circle class="point" cx="609.3" cy="291.63" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Sudan" data-onset="Mar 2012" data-articles="373" data-deaths="497"></circle>
+<circle class="point" cx="389.85" cy="343.3" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Chad" data-onset="Aug 2023" data-articles="129" data-deaths="37"></circle>
+<circle class="point" cx="363.8" cy="345.22" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Georgia" data-onset="Aug 2004" data-articles="124" data-deaths="27"></circle>
+<circle class="point" cx="310.57" cy="358.13" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Bangladesh" data-onset="Feb 2005" data-articles="95" data-deaths="14"></circle>
+<circle class="point" cx="445.53" cy="323.48" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Ethiopia" data-onset="Jun 2019" data-articles="194" data-deaths="72"></circle>
+<circle class="point" cx="487.21" cy="312.92" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Feb 2013" data-articles="241" data-deaths="118"></circle>
+<circle class="point" cx="138.71" cy="393.05" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Azerbaijan" data-onset="Dec 2005" data-articles="46" data-deaths="1"></circle>
+<circle class="point" cx="434.31" cy="318.7" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Afghanistan" data-onset="Aug 2024" data-articles="214" data-deaths="63"></circle>
+<circle class="point" cx="460.49" cy="311.72" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Ethiopia" data-onset="Oct 2019" data-articles="247" data-deaths="86"></circle>
+<circle class="point" cx="633.19" cy="268.85" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Nigeria" data-onset="Apr 2021" data-articles="595" data-deaths="658"></circle>
+<circle class="point" cx="245.56" cy="359.16" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Burkina Faso" data-onset="May 2018" data-articles="93" data-deaths="6"></circle>
+<circle class="point" cx="472.37" cy="301.45" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Burundi" data-onset="Dec 2014" data-articles="305" data-deaths="99"></circle>
+<circle class="point" cx="444.35" cy="307.03" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Tunisia" data-onset="Mar 2016" data-articles="272" data-deaths="71"></circle>
+<circle class="point" cx="407.97" cy="311.92" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Oct 2015" data-articles="246" data-deaths="46"></circle>
+<circle class="point" cx="502.28" cy="287.98" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Apr 2021" data-articles="402" data-deaths="141"></circle>
+<circle class="point" cx="431.6" cy="305.44" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Myanmar (Burma)" data-onset="Apr 2013" data-articles="281" data-deaths="61"></circle>
+<circle class="point" cx="717.26" cy="233.82" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Nigeria" data-onset="Mar 2015" data-articles="1,219" data-deaths="1,765"></circle>
+<circle class="point" cx="402.35" cy="311.52" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Tanzania, United Republic of" data-onset="Oct 2020" data-articles="248" data-deaths="43"></circle>
+<circle class="point" cx="534.42" cy="277.14" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Libya" data-onset="Mar 2015" data-articles="502" data-deaths="206"></circle>
+<circle class="point" cx="562.59" cy="266.68" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Yemen" data-onset="May 2017" data-articles="622" data-deaths="287"></circle>
+<circle class="point" cx="505.81" cy="279.23" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Mali" data-onset="Jul 2017" data-articles="481" data-deaths="147"></circle>
+<circle class="point" cx="472.37" cy="286.55" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Yemen" data-onset="Dec 2009" data-articles="414" data-deaths="99"></circle>
+<circle class="point" cx="867.38" cy="187.41" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Syria" data-onset="Jul 2013" data-articles="3,151" data-deaths="10,265"></circle>
+<circle class="point" cx="363.8" cy="309.98" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Libya" data-onset="Nov 2013" data-articles="256" data-deaths="27"></circle>
+<circle class="point" cx="876.22" cy="181.28" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Syria" data-onset="Sep 2012" data-articles="3,572" data-deaths="11,386"></circle>
+<circle class="point" cx="603.08" cy="247.2" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Jul 2003" data-articles="927" data-deaths="462"></circle>
+<circle class="point" cx="647.89" cy="235.24" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Sep 2000" data-articles="1,184" data-deaths="782"></circle>
+<circle class="point" cx="580.19" cy="251.89" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Syria" data-onset="Nov 2023" data-articles="842" data-deaths="353"></circle>
+<circle class="point" cx="498.6" cy="270.43" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Egypt" data-onset="Jul 2017" data-articles="576" data-deaths="135"></circle>
+<circle class="point" cx="339.26" cy="309.04" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Iran, Islamic Republic of" data-onset="Aug 2005" data-articles="261" data-deaths="20"></circle>
+<circle class="point" cx="335.1" cy="309.98" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Jordan" data-onset="Dec 2016" data-articles="256" data-deaths="19"></circle>
+<circle class="point" cx="516.62" cy="263.05" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Haiti" data-onset="Feb 2004" data-articles="670" data-deaths="167"></circle>
+<circle class="point" cx="818.67" cy="188.14" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Syria" data-onset="Apr 2016" data-articles="3,104" data-deaths="5,798"></circle>
+<circle class="point" cx="585.56" cy="245.39" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Pakistan" data-onset="Aug 2024" data-articles="962" data-deaths="376"></circle>
+<circle class="point" cx="725.93" cy="210.19" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Syria" data-onset="Sep 2018" data-articles="1,977" data-deaths="1,954"></circle>
+<circle class="point" cx="490.72" cy="266.53" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Yemen" data-onset="Feb 2024" data-articles="624" data-deaths="123"></circle>
+<circle class="point" cx="494.75" cy="264.98" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Lebanon" data-onset="Aug 2014" data-articles="644" data-deaths="129"></circle>
+<circle class="point" cx="245.56" cy="324.49" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Bangladesh" data-onset="Aug 2016" data-articles="190" data-deaths="6"></circle>
+<circle class="point" cx="267.0" cy="317.58" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Tunisia" data-onset="Oct 2013" data-articles="219" data-deaths="8"></circle>
+<circle class="point" cx="335.1" cy="299.56" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Algeria" data-onset="Dec 2020" data-articles="317" data-deaths="19"></circle>
+<circle class="point" cx="456.48" cy="269.34" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Burundi" data-onset="Mar 2008" data-articles="589" data-deaths="82"></circle>
+<circle class="point" cx="360.7" cy="292.69" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Indonesia" data-onset="Dec 2018" data-articles="365" data-deaths="26"></circle>
+<circle class="point" cx="726.2" cy="201.41" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Yemen" data-onset="Mar 2015" data-articles="2,366" data-deaths="1,960"></circle>
+<circle class="point" cx="633.32" cy="224.21" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Pakistan" data-onset="Jul 2011" data-articles="1,484" data-deaths="659"></circle>
+<circle class="point" cx="335.1" cy="295.86" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Azerbaijan" data-onset="Jul 2020" data-articles="342" data-deaths="19"></circle>
+<circle class="point" cx="543.78" cy="241.06" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Aug 2001" data-articles="1,051" data-deaths="230"></circle>
+<circle class="point" cx="485.76" cy="255.32" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Haiti" data-onset="Mar 2024" data-articles="785" data-deaths="116"></circle>
+<circle class="point" cx="354.13" cy="287.26" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="North Macedonia" data-onset="May 2001" data-articles="408" data-deaths="24"></circle>
+<circle class="point" cx="350.65" cy="287.14" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Uganda" data-onset="Dec 2022" data-articles="409" data-deaths="23"></circle>
+<circle class="point" cx="501.07" cy="247.3" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Egypt" data-onset="Jan 2015" data-articles="925" data-deaths="139"></circle>
+<circle class="point" cx="421.38" cy="266.29" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Colombia" data-onset="Feb 2018" data-articles="627" data-deaths="54"></circle>
+<circle class="point" cx="421.38" cy="266.14" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Lebanon" data-onset="Aug 2017" data-articles="629" data-deaths="54"></circle>
+<circle class="point" cx="604.36" cy="219.47" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="TÃ¼rkiye" data-onset="Nov 2015" data-articles="1,635" data-deaths="469"></circle>
+<circle class="point" cx="542.29" cy="234.26" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="TÃ¼rkiye" data-onset="Jul 2015" data-articles="1,208" data-deaths="226"></circle>
+<circle class="point" cx="478.14" cy="249.24" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Philippines" data-onset="Jun 2016" data-articles="889" data-deaths="106"></circle>
+<circle class="point" cx="640.74" cy="208.85" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Syria" data-onset="Aug 2011" data-articles="2,032" data-deaths="719"></circle>
+<circle class="point" cx="485.03" cy="244.58" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Pakistan" data-onset="Jul 2007" data-articles="978" data-deaths="115"></circle>
+<circle class="point" cx="455.44" cy="251.2" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Pakistan" data-onset="Mar 2006" data-articles="854" data-deaths="81"></circle>
+<circle class="point" cx="686.27" cy="192.3" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Ukraine" data-onset="Jun 2014" data-articles="2,851" data-deaths="1,227"></circle>
+<circle class="point" cx="648.87" cy="200.17" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Ukraine" data-onset="Sep 2014" data-articles="2,427" data-deaths="791"></circle>
+<circle class="point" cx="216.86" cy="306.67" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Burundi" data-onset="Jan 2019" data-articles="274" data-deaths="4"></circle>
+<circle class="point" cx="549.84" cy="223.23" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Pakistan" data-onset="Oct 2016" data-articles="1,514" data-deaths="247"></circle>
+<circle class="point" cx="465.26" cy="244.13" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Pakistan" data-onset="Dec 2021" data-articles="987" data-deaths="91"></circle>
+<circle class="point" cx="443.16" cy="248.42" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Pakistan" data-onset="Aug 2004" data-articles="904" data-deaths="70"></circle>
+<circle class="point" cx="443.16" cy="248.21" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Malaysia" data-onset="Mar 2013" data-articles="908" data-deaths="70"></circle>
+<circle class="point" cx="627.71" cy="202.46" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Georgia" data-onset="Aug 2008" data-articles="2,316" data-deaths="617"></circle>
+<circle class="point" cx="339.26" cy="273.04" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Kenya" data-onset="Jul 2015" data-articles="546" data-deaths="20"></circle>
+<circle class="point" cx="360.7" cy="266.06" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Iran, Islamic Republic of" data-onset="Sep 2016" data-articles="630" data-deaths="26"></circle>
+<circle class="point" cx="571.31" cy="213.02" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Jun 2009" data-articles="1,866" data-deaths="318"></circle>
+<circle class="point" cx="432.96" cy="245.9" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Pakistan" data-onset="May 2019" data-articles="952" data-deaths="62"></circle>
+<circle class="point" cx="762.09" cy="163.97" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="United States" data-onset="Sep 2001" data-articles="5,090" data-deaths="2,986"></circle>
+<circle class="point" cx="540.0" cy="217.71" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="TÃ¼rkiye" data-onset="Feb 2016" data-articles="1,695" data-deaths="220"></circle>
+<circle class="point" cx="427.37" cy="244.18" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Thailand" data-onset="Apr 2011" data-articles="986" data-deaths="58"></circle>
+<circle class="point" cx="363.8" cy="259.0" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Iran, Islamic Republic of" data-onset="Jul 2018" data-articles="728" data-deaths="27"></circle>
+<circle class="point" cx="479.72" cy="229.42" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Pakistan" data-onset="Oct 2013" data-articles="1,334" data-deaths="108"></circle>
+<circle class="point" cx="413.25" cy="244.48" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Egypt" data-onset="Apr 2014" data-articles="980" data-deaths="49"></circle>
+<circle class="point" cx="387.57" cy="250.69" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="China" data-onset="Aug 2008" data-articles="863" data-deaths="36"></circle>
+<circle class="point" cx="537.26" cy="213.12" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Ukraine" data-onset="May 2014" data-articles="1,862" data-deaths="213"></circle>
+<circle class="point" cx="570.23" cy="201.56" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Iraq" data-onset="Jan 2004" data-articles="2,359" data-deaths="314"></circle>
+<circle class="point" cx="275.98" cy="271.29" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Peru" data-onset="Nov 2007" data-articles="566" data-deaths="9"></circle>
+<circle class="point" cx="487.92" cy="215.93" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Iran, Islamic Republic of" data-onset="Dec 2023" data-articles="1,758" data-deaths="119"></circle>
+<circle class="point" cx="216.86" cy="279.13" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Thailand" data-onset="Oct 2003" data-articles="482" data-deaths="4"></circle>
+<circle class="point" cx="543.78" cy="197.62" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Dec 2008" data-articles="2,557" data-deaths="230"></circle>
+<circle class="point" cx="750.97" cy="142.12" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Afghanistan" data-onset="Oct 2001" data-articles="7,957" data-deaths="2,621"></circle>
+<circle class="point" cx="363.8" cy="237.35" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Iran, Islamic Republic of" data-onset="Jun 2017" data-articles="1,134" data-deaths="27"></circle>
+<circle class="point" cx="138.71" cy="292.03" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Azerbaijan" data-onset="Sep 2012" data-articles="370" data-deaths="1"></circle>
+<circle class="point" cx="742.89" cy="141.31" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Israel" data-onset="Jul 2014" data-articles="8,091" data-deaths="2,384"></circle>
+<circle class="point" cx="531.91" cy="191.0" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Jun 2015" data-articles="2,928" data-deaths="200"></circle>
+<circle class="point" cx="438.21" cy="209.99" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Israel" data-onset="Oct 2000" data-articles="1,985" data-deaths="66"></circle>
+<circle class="point" cx="256.95" cy="252.83" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Azerbaijan" data-onset="Aug 2014" data-articles="826" data-deaths="7"></circle>
+<circle class="point" cx="488.63" cy="193.37" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Nov 2012" data-articles="2,789" data-deaths="120"></circle>
+<circle class="point" cx="470.65" cy="196.32" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Oct 2013" data-articles="2,626" data-deaths="97"></circle>
+<circle class="point" cx="663.93" cy="148.37" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Libya" data-onset="Mar 2011" data-articles="7,003" data-deaths="944"></circle>
+<circle class="point" cx="482.79" cy="190.23" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Jul 2014" data-articles="2,974" data-deaths="112"></circle>
+<circle class="point" cx="467.09" cy="191.63" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Dec 2013" data-articles="2,890" data-deaths="93"></circle>
+<circle class="point" cx="917.29" cy="79.02" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Israel" data-onset="Oct 2023" data-articles="28,927" data-deaths="18,428"></circle>
+<circle class="point" cx="845.92" cy="96.66" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Iraq" data-onset="Mar 2003" data-articles="20,164" data-deaths="7,981"></circle>
+<circle class="point" cx="343.23" cy="216.15" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Iran, Islamic Republic of" data-onset="Aug 2018" data-articles="1,750" data-deaths="21"></circle>
+<circle class="point" cx="482.04" cy="180.92" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="India" data-onset="Aug 2020" data-articles="3,598" data-deaths="111"></circle>
+<circle class="point" cx="907.13" cy="72.69" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Ukraine" data-onset="Feb 2022" data-articles="32,922" data-deaths="16,360"></circle>
+<circle class="point" cx="335.1" cy="213.91" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Russian Federation" data-onset="Nov 2007" data-articles="1,832" data-deaths="19"></circle>
+<circle class="point" cx="553.21" cy="152.28" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Israel" data-onset="May 2021" data-articles="6,464" data-deaths="257"></circle>
+<circle class="point" cx="498.6" cy="161.03" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Russian Federation" data-onset="Jun 2024" data-articles="5,405" data-deaths="135"></circle>
+<circle class="point" cx="458.51" cy="165.57" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Ukraine" data-onset="Feb 2014" data-articles="4,926" data-deaths="84"></circle>
+<circle class="point" cx="533.59" cy="146.29" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Israel" data-onset="Jul 2006" data-articles="7,307" data-deaths="204"></circle>
+<circle class="point" cx="256.95" cy="198.56" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Iran, Islamic Republic of" data-onset="Apr 2018" data-articles="2,508" data-deaths="7"></circle>
+<circle class="point" cx="267.0" cy="182.58" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Russian Federation" data-onset="Aug 2015" data-articles="3,478" data-deaths="8"></circle>
+<circle class="point" cx="439.48" cy="132.94" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Russian Federation" data-onset="Jun 2023" data-articles="9,601" data-deaths="67"></circle>
+<circle class="point" cx="245.56" cy="175.99" r="4.5" fill="rgba(32,102,172,0.35)" stroke="rgba(32,102,172,0.75)" stroke-width="0.8" data-country="Israel" data-onset="Apr 2018" data-articles="3,980" data-deaths="6"></circle>
+      <text class="axis-label" x="528.00" y="682" text-anchor="middle">Log(Deaths)</text>
+      <text class="axis-label" transform="translate(28 327.00) rotate(-90)" text-anchor="middle">Log(Conflict Articles)</text>
+    </svg>
+  </div>
+  <div id="tooltip" class="tooltip" role="tooltip" aria-hidden="true">
+    <div class="title"></div>
+    <div class="meta"></div>
+  </div>
+  <script>
+    const tooltip = document.getElementById("tooltip");
+    const title = tooltip.querySelector(".title");
+    const meta = tooltip.querySelector(".meta");
+    const points = document.querySelectorAll(".point");
+
+    function moveTooltip(event) {
+      const offsetX = 16;
+      const offsetY = 18;
+      const boxWidth = 280;
+      let left = event.clientX + offsetX;
+      let top = event.clientY + offsetY;
+      if (left + boxWidth > window.innerWidth - 12) {
+        left = event.clientX - boxWidth - 10;
+      }
+      if (top + 90 > window.innerHeight - 12) {
+        top = event.clientY - 88;
+      }
+      tooltip.style.left = `${left}px`;
+      tooltip.style.top = `${top}px`;
+    }
+
+    points.forEach((point) => {
+      point.addEventListener("mouseenter", (event) => {
+        title.textContent = `${point.dataset.country} - ${point.dataset.onset}`;
+        meta.textContent = `${point.dataset.articles} conflict articles, ${point.dataset.deaths} deaths`;
+        tooltip.classList.add("visible");
+        tooltip.setAttribute("aria-hidden", "false");
+        moveTooltip(event);
+      });
+      point.addEventListener("mousemove", moveTooltip);
+      point.addEventListener("mouseleave", () => {
+        tooltip.classList.remove("visible");
+        tooltip.setAttribute("aria-hidden", "true");
+      });
+    });
+  </script>
+</body>
+</html>
