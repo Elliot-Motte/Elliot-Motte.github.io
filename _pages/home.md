@@ -47,12 +47,15 @@ redirect_from:
       <h2 class="page__title">Welcome!</h2>
 
       <p class="page__lead">
-        I am a Ph.D. Candidate in Economics at Universitat Pompeu Fabra.
+        I am a political economist, with particular interests in how the media shapes public beliefs and behaviors.
       </p>
 
       <p class="page__lead">
-        My research focuses primarily on <b>political economy</b>, with particular interests in how the media shapes public beliefs and behaviors.
-        Much of my work uses Large Language Models and other cutting-edge text analysis methods.
+        I will move to the <b><a href="https://www.unsw.edu.au/business/our-schools/economics" target="_blank" class="link-affiliation">University of New South Wales</a></b> as a postdoctoral fellow (2026-2027).<br>In September 2027, I will be joining <b><a href="https://crest.science/" target="_blank" class="link-affiliation">CREST</a></b> <b><a href="https://ensai.fr/en/" target="_blank" class="link-affiliation">ENSAI</a></b> as an Assistant Professor of Economics.
+      </p>
+
+      <p class="page__lead">
+        I obtained my Ph.D. from Universitat Pompeu Fabra in June 2026.
       </p>
 
       <p class="hero-contact">
